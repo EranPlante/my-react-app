@@ -1,16 +1,15 @@
-import TextInput from "./components/TextInput";
-import Counter from "./components/Counter";
-import Timer from "./components/Timer"
+import { UserProvider } from "./context/UserContext";
+import UserProfile from "./components/UserProfile";
 
 function App() {
   return (
-    <div>
-      <Counter />
-
-      <Timer />
-    </div>
+    <UserProvider>
+      <div>
+        <h1>useContext で状態管理</h1>
+        <UserProfile />
+      </div>
+    </UserProvider>
   );
 }
-
 
 export default App;
